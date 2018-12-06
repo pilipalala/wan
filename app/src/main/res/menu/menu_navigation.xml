@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_wan"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="WanAndroid" />
+        <item
+            android:id="@+id/nav_collect"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="收藏" />
+        <item
+            android:id="@+id/nav_setting"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="设置" />
+        <item
+            android:id="@+id/nav_login_out"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="退出" />
+    </group>
+
+    <item android:title="other">
+        <menu>
+            <item
+                android:id="@+id/nav_bus"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Bus" />
+            <item
+                android:id="@+id/nav_zhihu"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_send"
+                android:title="知乎" />
+            <item
+                android:id="@+id/nav_share"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_send"
+                android:title="分享" />
+        </menu>
+    </item>
+
+</menu>

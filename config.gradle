@@ -1,0 +1,21 @@
+ext {
+    supportLibrary = "26.1.0"
+    android = [
+            appId            : "com.wyj.wan",
+            compileSdkVersion: 28,
+            minSdkVersion    : 16,
+            targetSdkVersion : 28,
+            buildToolsVersion: "28.0.3",
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+    //统一配置依赖库
+    dependencies = [
+            "multidex"     : "com.android.support:multidex:1.0.3",
+            "supportV7"    : "com.android.support:appcompat-v7:${supportLibrary}",
+            "supportV4"    : "com.android.support:support-v4:${supportLibrary}",
+            "cardview"     : "com.android.support:cardview-v7:${supportLibrary}",
+            "constraint"   : "com.android.support.constraint:constraint-layout:1.1.3",
+            "suppoutDesign": "com.android.support:design:${supportLibrary}",
+    ]
+}

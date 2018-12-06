@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+//自定义 Build.gradle
+def cfg = rootProject.ext.android
+def libraries = rootProject.ext.dependencies
+android {
+    compileSdkVersion cfg.compileSdkVersion
+    buildToolsVersion cfg.buildToolsVersion
+    defaultConfig {
+        applicationId cfg.appId
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode cfg.versionCode
+        versionName cfg.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    testImplementation 'junit:junit:4.12'
+    implementation libraries.multidex
+    implementation libraries.supportV4
+    implementation libraries.supportV7
+    implementation libraries.cardview
+    implementation libraries.constraint
+    implementation libraries.suppoutDesign
+    //butterknife
+    implementation 'com.jakewharton:butterknife:8.7.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+    //rxjava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+
+    //RxAndroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    //RxBinding
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+
+    //Dagger
+    implementation 'com.google.dagger:dagger:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    // fragments
+    implementation 'me.yokeyword:fragmentation:1.3.6'
+
+    // Android组件库，里面定义了例如RxAppCompatActivity、RxFragment之类的Android组件
+    // 内部引用了基础库和Android库，如果使用此库则无需再重复引用 https://www.jianshu.com/p/7fae42861b8d
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    // Android使用的库，继承NaviActivity使用
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-navi:2.1.0'
+    // 打印log工具
+    implementation 'com.orhanobut:logger:2.2.0'
+
+    //轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    // recyclerView adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.26'
+
+    //glide  https://github.com/bumptech/glide
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //glide-transformations https://github.com/wasabeef/glide-transformations
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+
+    //SuperTextView
+    implementation 'com.github.chenBingX:SuperTextView:v3.1.1'
+    //基本库
+    implementation 'com.just.agentweb:agentweb:4.0.2' // (必选)
+    //下载库
+    implementation 'com.just.agentweb:download:4.0.2' // (可选)
+    //文件选择库
+    implementation 'com.just.agentweb:filechooser:4.0.2'// (可选)
+}

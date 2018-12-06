@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_search_pager_group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_8"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/dp_3"
+    app:cardElevation="@dimen/dp_2">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_5">
+
+        <LinearLayout
+            android:id="@+id/rl_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <com.coorchice.library.SuperTextView
+                android:id="@+id/tv_tag_gold"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:gravity="center"
+                android:padding="@dimen/dp_3"
+                android:text="新"
+                android:textSize="@dimen/sp_12"
+                app:stv_corner="@dimen/dp_3"
+                app:stv_solid="@color/white"
+                app:stv_stroke_color="@color/gold"
+                app:stv_stroke_width="@dimen/dp_1" />
+
+            <com.coorchice.library.SuperTextView
+                android:id="@+id/tv_tag_orangered"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toRightOf="@+id/tv_tag_gold"
+                android:gravity="center"
+                android:padding="@dimen/dp_3"
+                android:text="项目"
+                android:textSize="@dimen/sp_12"
+                app:stv_corner="@dimen/dp_3"
+                app:stv_solid="@color/white"
+                app:stv_stroke_color="@color/orangered"
+                app:stv_stroke_width="@dimen/dp_1" />
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="author"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_nice_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="niceDate"
+            android:textColor="@color/darker_gray"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textColor="@color/text_title_black"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toTopOf="@+id/ll_chapter_name"
+            app:layout_constraintTop_toBottomOf="@+id/rl_author" />
+
+        <LinearLayout
+            android:id="@+id/ll_chapter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_bordered"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tv_super_chapter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="superChapterName"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_chapter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="chapterName"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_collect"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/select_collect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

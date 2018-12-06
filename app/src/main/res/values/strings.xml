@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">wan</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="code0">Request successful</string>
+    <string name="networkErr500">服务器开小差了~~</string>
+    <string name="networkErr">网络错误</string>
+    <!-- Strings related to login -->
+    <string name="prompt_account">请输入用户名</string>
+    <string name="prompt_password">请输入密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_field_required">This field is required</string>
+
+</resources>
